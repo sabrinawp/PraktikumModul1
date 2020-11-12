@@ -5,16 +5,17 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Sabrina07239_RentalCamera {
-    static ArrayList<Sabrina07239_PetugasEntity>dataPetugas = new ArrayList();
-    static ArrayList<Sabrina07239_PelangganEntity>dataPelanggan = new ArrayList();
-    static Scanner input = new Scanner(System.in);
+    ArrayList<Sabrina07239_PetugasEntity>dataPetugas = new ArrayList();
+    ArrayList<Sabrina07239_PelangganEntity>dataPelanggan = new ArrayList();
+    Scanner input = new Scanner(System.in);
     
     public static void main(String[] args) {
+        Sabrina07239_RentalCamera data = new Sabrina07239_RentalCamera();
         System.out.println("Data Rental");
-        viewMenu();
+        data.viewMenu();
     }
     
-    static void viewMenu(){
+    void viewMenu(){
         int pil;
         DataPetugas();
         do{
@@ -69,7 +70,7 @@ public class Sabrina07239_RentalCamera {
         
     }
     
-    static void addPelanggan(){
+    void addPelanggan(){
         System.out.print("Input ID Pelanggan : ");
         String Sabrina07239_id_pelanggan = input.next();
         System.out.print("Input Nama Pelanggan : ");
@@ -98,7 +99,7 @@ public class Sabrina07239_RentalCamera {
         System.out.println("");
     }
     
-    static void viewListPelanggan(){
+    void viewListPelanggan(){
         if(dataPelanggan.size()>0){
             for(int i=0; i<dataPelanggan.size(); i++){
                 System.out.println(i+". ID = "+dataPelanggan.get(i).getId_Pelanggan());
@@ -114,7 +115,7 @@ public class Sabrina07239_RentalCamera {
         }
     }
     
-    static void editPelanggan(int index){
+    void editPelanggan(int index){
         System.out.print("Input ID Pelanggan : ");
         String Sabrina07239_id_pelanggan = input.next();
         System.out.print("Input Nama Pelanggan : ");
@@ -143,12 +144,12 @@ public class Sabrina07239_RentalCamera {
         System.out.println("");
     }
     
-    static void deletePelanggan(int index){
+    void deletePelanggan(int index){
         dataPelanggan.remove(index);
         System.out.println("Data berhasil dihapus");
     }
     
-    static void DataPetugas(){
+    void DataPetugas(){
     String Sabrina07239_id_petugas [] = {"01","02","03"};
     String Sabrina07239_nama [] = {"ASTRID","SABRINA","ALEX"};
     String Sabrina07239_notelp [] = {"01","02","03"};
